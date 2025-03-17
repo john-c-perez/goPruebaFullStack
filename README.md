@@ -10,9 +10,9 @@ Aplicación full-stack para visualizar y buscar publicaciones de redes sociales.
 
 **Características principales**:  
 ✅ Listado dinámico de publicaciones  
-🔍 Búsqueda en tiempo real (case-insensitive)  
+🔍 Búsqueda en tiempo real
 📊 Detalles completos de interacciones  
-⚡ Integración fluida frontend/backend  
+⚡ Integración frontend/backend  
 
 ---
 
@@ -28,7 +28,7 @@ Aplicación full-stack para visualizar y buscar publicaciones de redes sociales.
 #### **Backend (Spring Boot)** 🖥️  
 1. Clona el repositorio:  
    ```bash 
-   git clone [URL_DEL_REPOSITORIO]
+   git clone https://github.com/john-c-perez/goPruebaFullStack.git
 ## 🏁 Instrucciones de ejecución
 
 ### Backend (Spring Boot)
