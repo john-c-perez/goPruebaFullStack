@@ -1,83 +1,93 @@
-# Social Media Posts Viewer - FullStack Application
+# Social Media Posts Viewer - FullStack Application 🚀
 
-## Descripción del Proyecto  
-Aplicación full-stack que permite visualizar y buscar publicaciones de redes sociales. Desarrollada con **Spring Boot (Java 17)** en el backend y **React** en el frontend. La base de datos utiliza **PostgreSQL** gestionada mediante Supabase para facilitar el acceso.  
+## Descripción del Proyecto 📋  
+Aplicación full-stack para visualizar y buscar publicaciones de redes sociales. Desarrollada con:  
+🔹 **Backend**: Spring Boot (Java 17) + PostgreSQL (Supabase)  
+🔹 **Frontend**: React + Axios  
+🔹 **Integración**: Diseño modular y componentes reutilizables  
+
+![Tech Stack](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black) ![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql)
 
 **Características principales**:  
-- Listado de publicaciones con texto, fecha, autor e interacciones.  
-- Búsqueda en tiempo real (insensible a mayúsculas/minúsculas).  
-- Detalle completo de cada publicación.  
-- Integración fluida entre frontend y backend.  
-
-## Tecnologías Utilizadas  
-- **Backend**:  
-  - Java 17 + Spring Boot  
-  - Supabase (PostgreSQL)  
-  - Endpoints REST: Spring Web  
-- **Frontend**:  
-  - React + Axios (para consumo de APIs)  
-  - Estilos CSS básicos  
-- **Herramientas**:  
-  - IntelliJ IDEA  
-  - Node.js (v16+)  
+✅ Listado dinámico de publicaciones  
+🔍 Búsqueda en tiempo real (case-insensitive)  
+📊 Detalles completos de interacciones  
+⚡ Integración fluida frontend/backend  
 
 ---
 
-## Instalación y Ejecución  
+## 🛠️ Instalación y Ejecución  
 
 ### Requisitos Previos  
-- JDK 17 instalado.  
-- Node.js y npm instalados (para el frontend).  
-- Cliente de PostgreSQL o acceso a Supabase (opcional para revisión de datos).  
+- JDK 17  
+- Node.js v16+  
+- IDE (IntelliJ recomendado)  
 
 ### Pasos para Ejecutar  
 
-1. **Clonar el repositorio**:  
-   ```bash
+#### **Backend (Spring Boot)** 🖥️  
+1. Clona el repositorio:  
+   ```bash 
    git clone [URL_DEL_REPOSITORIO]
-Backend (Spring Boot):
+## 🏁 Instrucciones de ejecución
 
-Abrir el proyecto en IntelliJ.
+### Backend (Spring Boot)
 
-Navegar a: src/main/java/com/example/goapiaplicattion/GoApiApplication.java.
+1. Abre el proyecto en IntelliJ.
+2. Navega a `src/main/java/com/example/goapiaplicattion/GoApiApplication.java`.
+3. Ejecuta la clase principal (puerto `8080`).
 
-Ejecutar la clase GoApiApplication (puerto: 8080).
+### Frontend (React)
 
-Frontend (React):
+1. Abre la terminal y navega a la carpeta `frontend`:
+    ```bash
+    cd frontend
+    ```
+2. Instala las dependencias necesarias:
+    ```bash
+    npm install
+    ```
+3. Inicia la aplicación React (puerto `3000`):
+    ```bash
+    npm start
+    ```
 
-Abrir una terminal en la carpeta frontend.
+## 🔌 Endpoints Disponibles (Backend)
 
-Instalar dependencias:
-npm install
-Iniciar la aplicación:
-npm start
-La aplicación se ejecutará en: http://localhost:3000.
-Endpoints Disponibles (Backend)
-Endpoint	Descripción	Ejemplo de Uso
-GET /api/posts	Obtiene todas las publicaciones	http://localhost:8080/api/posts
-GET /api/posts/{id}	Obtiene una publicación por ID	http://localhost:8080/api/posts/1
-GET /api/posts/search?q={query}	Filtra publicaciones por palabra/clave	http://localhost:8080/api/posts/search?q=hola
-Consideraciones Importantes
-Base de datos:
+| Método | Endpoint                                | Descripción                           | Ejemplo                                     |
+|--------|-----------------------------------------|---------------------------------------|---------------------------------------------|
+| GET    | /api/posts                              | Obtiene todas las publicaciones       | [http://localhost:8080/api/posts](http://localhost:8080/api/posts)           |
+| GET    | /api/posts/{id}                         | Obtiene publicación por ID            | [http://localhost:8080/api/posts/1](http://localhost:8080/api/posts/1)       |
+| GET    | /api/posts/search?q={query}             | Filtra por palabra clave (texto completo) | [http://localhost:8080/api/posts/search?q=tech](http://localhost:8080/api/posts/search?q=tech) |
 
-Utiliza Supabase con PostgreSQL. La conexión está preconfigurada para simplificar la prueba.
+## ⚠️ Consideraciones Importantes
 
-Nota de seguridad: En un entorno real, se recomienda restringir el acceso y usar variables de entorno.
+### Base de Datos 🗃️
 
-Pruebas:
+La conexión está preconfigurada con **Supabase** (PostgreSQL).
 
-Los endpoints pueden probarse directamente desde Postman o navegador mientras el backend esté activo.
+🔒 **Importante**: En producción, asegúrate de usar **variables de entorno** y **autenticación**.
 
-Diseño:
+### Pruebas 🧪
 
-El frontend incluye estilos básicos. Se priorizó la funcionalidad sobre el diseño visual.
+Usa herramientas como **Postman** o **Insomnia** para probar los endpoints. Aquí tienes un ejemplo de uso en Postman.
 
-Estructura del Proyecto
-├── backend/           # Código Spring Boot (Java)
-│   └── src/main/java/com/example/goapiaplicattion
-├── frontend/          # Aplicación React
-│   ├── src/components # Componentes reutilizables
-│   └── src/services   # Lógica de consumo de APIs (Axios)
-└── README.md  
+### Diseño 🎨
 
-✨ Nota Final: Este proyecto fue desarrollado como evaluación técnica, priorizando buenas prácticas, integración full-stack y documentación clara. ¡Gracias por revisarlo!
+Los estilos están enfocados en la funcionalidad, con una estructura mínima. Los componentes se encuentran organizados en `src/components`.
+
+## 📂 Estructura del Proyecto
+
+. ├── backend/
+│ ├── src/ │ │ └── main/java/com/example/goapiaplicattion # Lógica Spring Boot │ └── resources/application.properties # Config DB ├── frontend/
+│ ├── public/ # Assets estáticos │ └── src/
+│ ├── components/ 🧩 Componentes reutilizables │ ├── services/ ⚡ Lógica de APIs (Axios) │ └── App.js # Punto de entrada └── README.md # Documentación
+
+## 📝 Conclusión
+
+Este proyecto demuestra habilidades full-stack con:
+- Integración entre **React** y **Spring Boot**.
+- Gestión de estados y consumo de APIs REST.
+- Buenas prácticas de documentación.
+
+¡Gracias por tu interés! 👨💻👩💻
