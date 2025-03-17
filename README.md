@@ -78,10 +78,18 @@ Los estilos están enfocados en la funcionalidad, con una estructura mínima. Lo
 
 ## 📂 Estructura del Proyecto
 
-. ├── backend/
-│ ├── src/ │ │ └── main/java/com/example/goapiaplicattion # Lógica Spring Boot │ └── resources/application.properties # Config DB ├── frontend/
-│ ├── public/ # Assets estáticos │ └── src/
-│ ├── components/ 🧩 Componentes reutilizables │ ├── services/ ⚡ Lógica de APIs (Axios) │ └── App.js # Punto de entrada └── README.md # Documentación
+.
+├── backend/          
+│   ├── src/
+│   │   └── main/java/com/example/goapiaplicattion  # Lógica Spring Boot
+│   └── resources/application.properties            # Config DB
+├── frontend/         
+│   ├── public/                # Assets estáticos
+│   └── src/                   
+│       ├── components/        🧩 Componentes reutilizables
+│       ├── services/          ⚡ Lógica de APIs (Axios)
+│       └── App.js             # Punto de entrada
+└── README.md   
 
 ## 📝 Conclusión
 
